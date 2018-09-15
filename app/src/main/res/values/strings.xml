@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TrikiApp</string>
+    <string name="lbl_ganador">Ganador</string>
+    <string name="lbl_reiniciar">Reiniciar Juego</string>
+</resources>
