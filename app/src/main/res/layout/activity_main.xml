@@ -100,23 +100,22 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/lblGanador"
+        android:id="@+id/lblWin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
-        android:text="@string/lbl_ganador"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnReiniciar"
+        android:id="@+id/btnResetGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:background="@color/colorAccent"
         android:text="@string/lbl_reiniciar"
-        android:textColor="@color/colorBlanco"
+        android:textColor="@color/colorWhite"
         android:textSize="18sp"
         android:textStyle="bold" />
 
