@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         btn9.setOnClickListener { click(it) }
         btnResetGame.setOnClickListener { resetGame() }
 
-        resetGame();
+        resetGame()
 
     }
 
@@ -95,9 +95,9 @@ class MainActivity : AppCompatActivity() {
 
         var win = false
 
-        for (col in 0 until matrixGame.size) {
-            for (row in 0 until matrixGame.size) {
-                if (matrixGame[col][row] != numUser) {
+        for (row in 0 until matrixGame.size) {
+            for (col in 0 until matrixGame.size) {
+                if (matrixGame[row][col] != numUser) {
                     win = false
                     break
                 } else {
@@ -116,24 +116,24 @@ class MainActivity : AppCompatActivity() {
 
     private fun validateColumns(numUser: Int): Boolean {
 
-        var won = false
+        var win = false
 
-        for (row in 0 until matrixGame.size) {
-            for (col in 0 until matrixGame.size) {
-                if (matrixGame[col][row] == numUser) {
-                    won = true
+        for (col in 0 until matrixGame.size) {
+            for (row in 0 until matrixGame.size) {
+                if (matrixGame[row][col] == numUser) {
+                    win = true
                 } else {
-                    won = false
+                    win = false
                     break
                 }
             }
 
-            if (won) {
+            if (win) {
                 break
             }
         }
 
-        return won
+        return win
 
     }
 
@@ -144,12 +144,12 @@ class MainActivity : AppCompatActivity() {
         for (row in 0 until matrixGame.size) {
             for (col in 0 until matrixGame.size) {
                 if (row == col) {
-                    win = matrixGame[col][row] == numUser
+                    win = matrixGame[row][col] == numUser
                     break
                 }
             }
 
-            if (win == false) {
+            if (!win) {
                 break
             }
         }
@@ -164,8 +164,8 @@ class MainActivity : AppCompatActivity() {
         var col = 2
 
         for (row in 0 until matrixGame.size) {
-            win = matrixGame[col][row] == numUser
-            if (win == false) {
+            win = matrixGame[row][col] == numUser
+            if (!win) {
                 break
             }
             col--
